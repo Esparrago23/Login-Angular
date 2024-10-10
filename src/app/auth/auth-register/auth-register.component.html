@@ -1,12 +1,7 @@
-<div>
-    <h1>login</h1>
-    <form>
-        <label>Ingrese su nombre de usuario</label>
-        <input>
-        <label>Ingrese su correo</label>
-        <input>
-        <label>Ingrese su contraseña </label>
-        <input>
-
-    </form>
-</div>
+<h2>Registro</h2>
+<form (ngSubmit)="registrar()">
+  <input [(ngModel)]="nuevoUsuario.nombre" name="nombre" placeholder="Nombre" required />
+  <input [(ngModel)]="nuevoUsuario.email" name="email" placeholder="Email" required />
+  <input [(ngModel)]="nuevoUsuario.password" name="password" placeholder="Contraseña" required type="password" />
+  <button type="submit">Registrar</button>
+</form>

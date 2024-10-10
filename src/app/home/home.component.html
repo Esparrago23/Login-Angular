@@ -1,0 +1,19 @@
+<div>
+    <button (click)="cambiarVista('login')">Login</button>
+    <button (click)="cambiarVista('registro')">Registrar</button>
+    <button (click)="cambiarVista('lista')">Ver Usuarios</button>
+  </div>
+  
+  <div *ngIf="mostrarLogin">
+    <h2>Login</h2>
+    <p>Formulario de login</p>
+  </div>
+
+  <div *ngIf="mostrarRegistro">
+    <app-auth-register></app-auth-register>
+  </div>
+
+  <div *ngIf="mostrarLista">
+    <app-lista-usuarios></app-lista-usuarios>
+  </div>
+  
